@@ -74,3 +74,30 @@ plt.show()
 print(M5)
 
 #Tarea hacer un asterísco
+
+#Se crea una imagen vertical
+M6 = np.zeros([1500,1500])
+#Control con for anidado de las filas y columnas
+for i in range(0,1500):
+    for j in range(0,1500):
+        if i==j:
+            M6[i,j]=0
+        elif abs(i-j) < 31:
+            M6[i,j]=0
+            
+        elif abs(i-750) < 31:
+            M6[i,j]=0
+            
+        elif abs(j-750) < 31:
+            M6[i,j]=0
+            
+        elif abs(1500-i-j) < 31:
+            M6[i,j]=0
+            
+        else:
+            M6[i,j]=255
+            
+imgplot = plt.imshow(M6, cmap='gray')
+plt.title("Tarea")
+plt.show()
+print(M6)
