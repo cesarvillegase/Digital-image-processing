@@ -6,3 +6,5 @@ from matplotlib import pyplot as plt
 import matplotlib.image as mpimg
 
 img = mpimg.imread('cat.jpeg')
+
+#Conversión a escala de grises 
