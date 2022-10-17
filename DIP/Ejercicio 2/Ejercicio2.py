@@ -25,7 +25,7 @@ plt.imshow(img_gris, cmap='gray') #Este comando forma la imagen
 plt.title("Imagen a escala de grises")
 plt.show() #Este comando despliega la imagen
 
-#Uso de libreria skimage
+#Uso de libreria skimage - Compacta pero completa
 from skimage import color
 from skimage import io
 
@@ -40,5 +40,9 @@ plt.show()
 imgplot = plt.imshow(img2_gris, cmap='gray')
 plt.show()
  
- #Uso de la libreria PIL
+ #Uso de la libreria PIL - Sirve para el tratamiento de imágenes
 from PIL import Image
+
+img3 = Image.open('/Users/cvillegas/workspace/Py/DIP/Ejercicio 2/Cat.jpg')
+img3_gris = img3.convert('L')
+img3_gris.save('Cat_gray.jpg')
