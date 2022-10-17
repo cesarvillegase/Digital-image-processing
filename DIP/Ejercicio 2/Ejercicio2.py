@@ -46,3 +46,8 @@ from PIL import Image
 img3 = Image.open('/Users/cvillegas/workspace/Py/DIP/Ejercicio 2/Cat.jpg')
 img3_gris = img3.convert('L')
 img3_gris.save('Cat_gray.jpg')
+
+#Uso de la libreria OPEN CV
+#import CV2
+#img4 = cv2.imread('/Users/cvillegas/workspace/Py/DIP/Ejercicio 2/Cat.jpg')
+#cv2.imshow(img4)
