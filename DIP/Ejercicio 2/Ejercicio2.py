@@ -50,4 +50,4 @@ img3_gris.save('Cat_gray.jpg')
 #Uso de la libreria OPEN CV
 #import CV2
 #img4 = cv2.imread('/Users/cvillegas/workspace/Py/DIP/Ejercicio 2/Cat.jpg')
-#cv2.imshow(img4)
+#plt.imshow(img4)
