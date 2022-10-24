@@ -16,9 +16,14 @@ plt.xlabel('Intensiddad')
 plt.ylabel('Cantidad de pixeles')
 plt.show()
 
-img = Image.open('/Users/cvillegas/workspace/Py/DIP/Ejercicio 4/Cat4.jpg')
-histograma=np.zeros(256)
-print(histograma)
+#img = Image.open('/Users/cvillegas/workspace/Py/DIP/Ejercicio 4/Cat4.jpg')
+#histograma=np.zeros(256)
+#print(histograma)
+
+R = img[:,:,0]
+G = img[:,:,1]
+B = img[:,:,2]
 
 img = mpimg.imread('/Users/cvillegas/workspace/Py/DIP/Ejercicio 4/Cat4.jpg')
-
+img_gris = 0.2989*R + 0.5870*G + 0.1140*B
+histograma=np.zeros(256)
