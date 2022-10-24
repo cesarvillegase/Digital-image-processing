@@ -17,11 +17,10 @@ M1 = [[1, 30, 45, 60, 100, 150, 190, 245],
       [1, 30, 45, 60, 100, 150, 190, 245],
       [1, 30, 45, 60, 100, 150, 190, 245]]
 
-imgplot = plt.imshow(M1, cmap='gray')
-
 #Mostrar la imagen
-plt.show()
+imgplot = plt.imshow(M1, cmap='gray')
 plt.title("Imagen 1")
+plt.show()
 print(M1)
 
 #Imagen en escala de grises pero con ciclo For
@@ -33,20 +32,20 @@ for i in range(0,255):
         M2[i,j] = j
         
 imgplot = plt.imshow(M2, cmap='gray')
-plt.show()
 plt.title("Imagen 2")
+plt.show()
 print(M2)
 
 #Crea una matriz de 255x255 con valores en cero en cada entrada
-M3 = np.zeros([256,256])
+M3 = np.zeros([255,255])
 #control con for anidado de las filas y columnas
-for i in range(0,256):
-    for j in range(0,256):
-        M3[i,j] = 256-j
+for i in range(0,255):
+    for j in range(0,255):
+        M3[i,j] = 255-j
 
 imgplot = plt.imshow(M3, cmap='gray')
-plt.show()
 plt.title("Imagen 3")
+plt.show()
 print(M3)
 
 #Crea una matriz de 2000x1500 con valores en cero en cada entrada
@@ -59,6 +58,7 @@ for i in range(0,2000):
 imgplot = plt.imshow(M4, cmap='gray')
 plt.title("Imagen 4")
 plt.show()
+print(M4)
 
 #Crea una imagen vertical
 M5 = np.zeros([1500,1500])

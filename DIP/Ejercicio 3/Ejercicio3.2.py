@@ -99,7 +99,7 @@ img8[:,:,1]=green
 img8[:,:,2]=blue
 
 f, axes = plt.subplots(2,2, constrained_layout = True)
-axes[0, 0].title.set_text('Normal')
+axes[0, 0].title.set_text('Negative')
 axes[0, 0].imshow(img5)
 axes[0, 1].title.set_text('Cyan')
 axes[0, 1].imshow(img6)
