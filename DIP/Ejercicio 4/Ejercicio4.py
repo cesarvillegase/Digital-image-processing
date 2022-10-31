@@ -25,9 +25,39 @@ plt.show()
 img = mpimg.imread('/Users/cvillegas/workspace/Py/DIP/Ejercicio 4/Cat4.jpg')
 img_gris = 0.2989*img[:,:,0] + 0.5870*img[:,:,1] + 0.1140*img[:,:,2]
 
-histograma=np.zeros(256)
-print(img_gris[2, 2, 0]) # Prueba de acceso al arreglo
-for i in range(2049):
-    for j in range(2049):
-        histograma[img_gris[i,j]] = histograma[img_gris[i,j]] + 1
-print(histograma)
+# Histograma en rojo
+histograma1=np.zeros(256)
+#print() # Prueba de acceso al arreglo
+for i in range(2048):
+    for j in range(2048):
+        histograma1[img[i,j,0]] = histograma1[img[i,j,0]] + 1
+print(histograma1)
+plt.plot(histograma1, color='red')
+plt.xlabel('Intensidad')
+plt.ylabel('Cantidad de pixeles')
+#plt.show()
+
+#Histograma en verde
+histograma2=np.zeros(256)
+#print() # Prueba de acceso al arreglo
+for i in range(2048):
+    for j in range(2048):
+        histograma2[img[i,j,1]] = histograma2[img[i,j,1]] + 1
+print(histograma2)
+plt.plot(histograma2, color='green')
+plt.xlabel('Intensidad')
+plt.ylabel('Cantidad de pixeles')
+#plt.show()
+
+# Histograma en azul
+histograma3=np.zeros(256)
+#print() # Prueba de acceso al arreglo
+for i in range(2048):
+    for j in range(2048):
+        histograma3[img[i,j,2]] = histograma3[img[i,j,2]] + 1
+print(histograma3)
+plt.plot(histograma3, color='blue')
+plt.xlabel('Intensidad')
+plt.ylabel('Cantidad de pixeles')
+
+plt.show()
