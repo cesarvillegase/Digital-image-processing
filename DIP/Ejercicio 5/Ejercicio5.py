@@ -70,6 +70,28 @@ imagen3.show()
 
 #Rescalamiento de imagenes 2
 imagen4 = Image.open('/Users/cvillegas/workspace/Py/DIP/Ejercicio 5/car.jpeg')
-imagen_reescalada = imagen4.resize((100,50))
+imagen_reescalada = imagen4.resize((100,100))
 print(imagen_reescalada.size)
 imagen_reescalada.show()
+
+#Cambiar la orientación de imágenes
+#from PIL import Image
+#from matplotlib import pyplot
+#imagen4 = Image.open('/Users/cvillegas/workspace/Py/DIP/Ejercicio 5/car.jpeg')
+
+#Cambiar la orientación horizontal
+horizontal = imagen4.transpose(Image.FLIP_LEFT_RIGHT)
+#Cambiar la orientación vertical 
+vertical = imagen4.transpose(Image.FLIP_TOP_BOTTOM)
+
+#Subplot de tres posiciones, el primero en la posición 1,1, el siguiente 1,2
+pyplot.subplot(311) 
+pyplot.imshow(imagen4)
+
+pyplot.subplot(312) 
+pyplot.imshow(horizontal)
+
+pyplot.subplot(313) 
+pyplot.imshow(vertical)
+
+pyplot.show()
