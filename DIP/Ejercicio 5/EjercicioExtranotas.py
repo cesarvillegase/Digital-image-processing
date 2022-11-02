@@ -30,7 +30,9 @@ deg=180
 h,w,c = im.shape #Heigth, width y chanels
 h2,w2=h//2,w//2 #H2 es la mitad de la altura y w2 es la mitad del ancho, es el porque da igual a h entre 2 y w entre 2.
 
-#Lo que se busca es el valor maximo de las coordenadas x y y de los puntos los cuales son superior izquierdo, superior derecho y inferior derecho.
+#Mitad del Ancho rotado y mitad del largo rotado igual al valor máximo, Se busca que sea un valor abs
+#rot_mat que esta toma ña cant. de grados y la matriz multiplica. Lo que se busca es el valor maximo de
+#las coordenadas x y y de los puntos los cuales son superior izquierdo, superior derecho y inferior derecho.
 wr2,hr2=(np.max(np.abs(rot_mat(deg) @ np.array([[-w2,w2,w2],[h2,h2,-h2]])),axis=1)).astype(np.int32)
 wr,hr=wr2*2,hr2*2 #
 
