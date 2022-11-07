@@ -26,7 +26,7 @@ pyplot.imshow(im)
 pyplot.show()
 
 #Cantidad de grados de la rotación de matriz, en este caso se indica que se rotara 180 grados.
-deg=180 
+deg=360 
 h,w,c = im.shape #Heigth, width y chanels
 h2,w2=h//2,w//2 #H2 es la mitad de la altura y w2 es la mitad del ancho, es el porque da igual a h entre 2 y w entre 2.
 

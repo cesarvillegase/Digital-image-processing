@@ -95,3 +95,19 @@ pyplot.subplot(313)
 pyplot.imshow(vertical)
 
 pyplot.show()
+
+#Jueves 3 de noviembre del 2022
+
+#Plot original image
+pyplot.subplot(311)
+pyplot.imshow(imagen4)
+
+#Rotate 45 degrees
+pyplot.subplot(312)
+pyplot.imshow(imagen4.rotate(45))
+
+#Rotate 90 degrees
+pyplot.subplot(313)
+pyplot.imshow(imagen4.rotate(90))
+
+pyplot.show()
