@@ -1,4 +1,4 @@
-#Ejercicio 2
+#Ejercicio 2 - Manipulación de imágenes e información
 #Elaborado por César Alejandro Villegas Espíndola
 #Fecha: Jueves 3 de noviembre del 2022
 
@@ -24,7 +24,8 @@ img_ng[:,:,2]=255-img[:,:,2]
 img1 = img +  img_ng
 
 plt.imshow(img1)
-plt.title("Imagen editada ejercicio 1")
+plt.title("Imagen editada - ejercicio 1")
+plt.show()
 
 #Se separan los espacios de color
 
@@ -105,12 +106,21 @@ img1_8[:,:,2]=blue
 
 #Imagen 2 - Red + Cyan
 imag2 = img1_2 + img1_6
+plt.imshow(imag2)
+plt.title("Ejercicio 1 - Imagen editada 2")
+plt.show()
 
 #Imagen 3 - Green + Magenta
 imag3 = img1_3 + img1_7
+plt.imshow(imag3)
+plt.title("Ejercicio 1 - Imagen editada 3")
+plt.show()
 
 #Imagen 4 - blue + Yellow
-imag4 = img1_4 + img1_7
+imag4 = img1_4 + img1_8
+plt.imshow(imag4)
+plt.title("Ejercicio 1 - Imagen editada 4")
+plt.show()
 
 ##########################Ejercicio2##########################
 
@@ -153,7 +163,7 @@ plt.imshow(img)
 plt.title("Imagen original")
 
 #Imagen saturada - imagen2
-plt.subplot(313)
+plt.subplot(312)
 plt.imshow(img_st)
 plt.title("Imagen editada ejercicio 2")
 
@@ -250,7 +260,7 @@ plt.ylabel('Cantidad de pixeles')
 
 plt.show()
 
-##########################Ejercicio2##########################
+##########################Ejercicio3##########################
 
 f, axes = plt.subplots(2,2, constrained_layout = True)
 
@@ -263,7 +273,8 @@ axes[0, 1].title.set_text('Imagen rotada a 30 grados')
 axes[0, 1].imshow(Imagen_st.rotate(30))
 
 #Imagen2 - Mirror x y rotada 60º y a 300 x 300
-img_st_mr = Image.fromarray(np.flip(Imagen_st, (0, 1)))
+img_rs = Imagen_st.resize((300,300))
+img_st_mr = Image.fromarray(np.flip(img_rs, (0, 1)))
 axes[1, 0].title.set_text('Imagen rotada a 60 grados y con mirror')
 axes[1, 0].imshow(img_st_mr.rotate(60))
 plt.show()

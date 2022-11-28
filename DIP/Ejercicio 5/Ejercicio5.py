@@ -52,7 +52,7 @@ print(data.shape)
 #Convertir un arreglo a una imagen
 imagen3 = Image.fromarray(data)
 print(imagen3.format)
-#Imprime el espacio de cpñpr 
+#Imprime el espacio de color
 print(imagen3.mode)
 #Obtener las dimensiones de la imagen
 print(imagen3.size)
