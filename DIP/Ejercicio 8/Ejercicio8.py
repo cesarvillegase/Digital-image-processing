@@ -39,6 +39,8 @@ print(largo)
 
 img_filtrada = img.copy()
 
+############################################################################################################################################
+
 # Media
 # Se itera por cada parte de la matriz
 mascara = np.ones([3,3], dtype=int)
@@ -53,21 +55,28 @@ plt.imshow(img_filtrada)
 plt.title("Media")
 plt.show()
 
+############################################################################################################################################
+
 # MEDIANA
 # Se itera por cada parte de la matriz
 # Se hace nuevamente una copia de img
 img_filtrada1 = img.copy()
 data = asarray(img_filtrada1)
 
-for i in range(ancho-1):
-    for j in range(largo-1):
-        temp = [img[i-1, j-1], img[i, j-1], img[i+1, j-1],img[i-1, j], img[i, j], img[i+1, j], img[i-1, j+1], img[i-1, j+1], img[i+1, j+1]]
-        temp=sorted(temp)
-        Imagen_ft1[i,j] = temp[4]
+for i in range(largo-1):
+    for j in range(ancho-1):
+      temp = [img_gris[i-1, j-1], img_gris[i, j-1], img_gris[i+1, j-1], img_gris[i-1, j], img_gris[i, j], img_gris[i+1, j], img_gris[i-1, j+1], img_gris[i-1, j+1], img_gris[i+1, j+1]]
+      temp = sorted(temp)
+      img_filtrada1[i,j] = temp[4]
+      
+mediana = Image.fromarray(img_filtrada1)
+img_filtrada1
             
-plt.imshow(Imagen_ft1)
+plt.imshow(img_filtrada1)
 plt.title("Mediana")
 plt.show()
+
+############################################################################################################################################
 
 # MINIMO
 
@@ -82,6 +91,8 @@ for i in range(1,largo-1):
 plt.imshow(Imagen_ft1)
 plt.title("Minimo")
 plt.show()
+
+############################################################################################################################################
 
 # MAXIMO
 
