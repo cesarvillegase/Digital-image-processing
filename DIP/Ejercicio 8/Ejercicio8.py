@@ -7,6 +7,7 @@ from matplotlib import pyplot as plt
 import matplotlib.image as mpimg
 from PIL import Image
 import numpy as np
+from numpy import asarray
 
 img = mpimg.imread('/Users/cvillegas/workspace/Py/DIP/Ejercicio 8/saltandpeppernoise.jpg')
 
@@ -38,27 +39,25 @@ print(largo)
 
 img_filtrada = img.copy()
 
-Imagen_ft = Image.fromarray(img_filtrada)
-
-#MEDIA
-
+# Media
+# Se itera por cada parte de la matriz
 mascara = np.ones([3,3], dtype=int)
 mascara = mascara/9
 for i in range(ancho-1):
     for j in range(largo-1):
-        img_filtrada[i,j] = img[i-1, j-1] * mascara[0,0] + img[i, j-1] * mascara[0,1] + img[i+1, j-1] * mascara[0,2] 
-        + img[i-1, j] * mascara[1,0] + img[i, j] * mascara[1,1] + img[i+1, j] * mascara[1,2] 
-        + img[i-1, j+1] * mascara[2,0] + img[i-1, j+1] * mascara[2,1] + img[i+1, j+1] * mascara[2,2]
+        img_filtrada[i,j] = img_gris[i-1, j-1] * mascara[0,0] + img_gris[i, j-1] * mascara[0,1] + img_gris[i+1, j-1] * mascara[0,2] 
+        + img_gris[i-1, j] * mascara[1,0] + img_gris[i, j] * mascara[1,1] + img_gris[i+1, j] * mascara[1,2] 
+        + img_gris[i-1, j+1] * mascara[2,0] + img_gris[i-1, j+1] * mascara[2,1] + img_gris[i+1, j+1] * mascara[2,2]
         
 plt.imshow(img_filtrada)
 plt.title("Media")
 plt.show()
 
 # MEDIANA
-
+# Se itera por cada parte de la matriz
+# Se hace nuevamente una copia de img
 img_filtrada1 = img.copy()
-
-Imagen_ft1 = Image.fromarray(img_filtrada1)
+data = asarray(img_filtrada1)
 
 for i in range(ancho-1):
     for j in range(largo-1):
