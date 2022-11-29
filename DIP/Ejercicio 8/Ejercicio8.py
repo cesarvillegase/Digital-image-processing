@@ -98,15 +98,18 @@ plt.show()
 ############################################################################################################################################
 
 # MAXIMO
+# Nuevamente se itera por cada parte de la matriz
+# Y se hace una copia de img llamada img_filtrada3
+img_filtrada3 = img.copy()
 
 for i in range(1,largo-1):
     for j in range(1,ancho-1):
-        temp = [img[i-1, j-1], img[i, j-1], img[i+1, j-1],
-        img[i-1, j], img[i, j], img[i+1, j], 
-        img[i-1, j+1], img[i-1, j+1], img[i+1, j+1]]
+        temp = [img_gris[i-1, j-1], img_gris[i, j-1], img_gris[i+1, j-1],
+        img_gris[i-1, j], img_gris[i, j], img_gris[i+1, j], 
+        img_gris[i-1, j+1], img_gris[i-1, j+1], img_gris[i+1, j+1]]
         temp=max(temp)
-        Imagen_ft1[i,j] = temp
+        img_filtrada3[i,j] = temp
 
-plt.imshow(Imagen_ft1)
+plt.imshow(img_filtrada3)
 plt.title("Maximo")
 plt.show()
