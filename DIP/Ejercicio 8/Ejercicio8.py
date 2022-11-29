@@ -79,16 +79,19 @@ plt.show()
 ############################################################################################################################################
 
 # MINIMO
+# Se itera por cada parte de la matriz
+# Nuevamente se hace una copia de img llamada img_filtrada2
+img_filtrada2 = img.copy()
 
 for i in range(1,largo-1):
     for j in range(1,ancho-1):
-        temp = [img[i-1, j-1], img[i, j-1], img[i+1, j-1],
-        img[i-1, j], img[i, j], img[i+1, j], 
-        img[i-1, j+1], img[i-1, j+1], img[i+1, j+1]]
+        temp = [img_gris[i-1, j-1], img_gris[i, j-1], img_gris[i+1, j-1], 
+                img_gris[i-1, j], img_gris[i, j], img_gris[i+1, j],
+                img_gris[i-1, j+1],img_gris[i-1, j+1], img_gris[i+1, j+1]]
         temp=min(temp)
-        Imagen_ft1[i,j] = temp
+        img_filtrada2[i,j] = temp
 
-plt.imshow(Imagen_ft1)
+plt.imshow(img_filtrada2)
 plt.title("Minimo")
 plt.show()
 
