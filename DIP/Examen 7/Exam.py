@@ -1,4 +1,4 @@
-#Examen 
+#Examen - Ejercicio 7
 #Elaborado por César Alejandro Villegas Espíndola
 #Fecha: Jueves 10 de noviembre del 2022
 
@@ -24,8 +24,8 @@ red = img[:,:,0]
 green = img[:,:,1]
 blue = img[:,:,2]
 
-green =0*green
-blue =blue*0
+green = 0*green
+blue = blue*0
 
 img1_2[:,:,0]=red
 img1_2[:,:,1]=green
